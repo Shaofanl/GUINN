@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<!-- jquery -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+					integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		 crossorigin="anonymous"></script>
+
+		<!-- jquery UI -->
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+					integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+		 crossorigin="anonymous"></script>
+
+		<!-- Bootstrap4 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<!-- jquery Panzoom -->
+		<script src="/static/javascript/3rd/jquery.panzoom.min.js"></script>
+		<!-- highlight.js -->
+		<!-- highlight.js css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"> </script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+
+		<!-- jquery.flowchart -->
+		<script src="/static/javascript/jquery.flowchart.modified.js"></script>
+		<!-- main-->
+		<script src="/static/javascript/misc.js"></script> <!-- other modules depend on misc.js-->
+		<script src="/static/javascript/layers.js"></script> 
+		<script src="/static/javascript/backend.js"></script>
+		<script src="/static/javascript/main.js"></script>
+
+		<!-- jquery.flowchart -->
+		<link rel="stylesheet" href="/static/javascript/3rd/jquery.flowchart/jquery.flowchart.min.css">
+		<!-- preset -->
+		<link rel="stylesheet" href="/static/css/custom.css">
+		<!-- main-->
+		<link rel="stylesheet" href="/static/css/main.css">
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+
+			<div class="col-sm-8">
+
+				<div class="card">
+					<div class="card-header"> GUI (Scoll to zoom in/out) </div>
+
+					<div class="card-body">
+
+						<div id="chart_container">
+							<div class="flowchart-example-container" id="graph_container"></div>
+						</div>
+
+						<div class="draggable_operators">
+							<div class="draggable_operators_label">
+								Operators (drag and drop them in the flowchart):
+							</div>
+							<div class="draggable_operators_divs" id="draggable_operators_list">
+							</div>
+						</div> <!-- draggable_operators -->
+						<button class="delete_selected_button btn btn-danger">Delete Selected Operator/Link</button>
+					</div> <!-- card-body -->
+				</div> <!--card-->
+
+			</div> <!-- div class="col-md-10" -->
+
+
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-header">
+						Generated code
+					</div>
+					<div class="card-body">
+						<form>
+								<!--pre class="coding"><code class="python">
+								</code></pre-->
+								<textarea class="form-control coding" rows=10 id="generatedCode" readonly></textarea>
+						</form>
+
+					</div> <!-- card-body -->
+				</div> <!-- card-->
+
+
+				<div class="card">
+					<div class="card-header">Graph content</div>
+					<div class="card-body">
+						<form>
+								<textarea class="form-control coding" rows=10 id="graphCode" readonly></textarea>
+								<!--pre class="coding"><code class="javascript" id="graphCode">
+								</code></pre-->
+						</form>
+
+					</div> <!-- card-body -->
+				</div> <!-- card-->
+
+
+			</div> <!-- <div class="col-md-2"> -->
+
+
+			</div> <!--<div class="row">-->
+		</div> <!-- container -->
+	</body>
+</html>
